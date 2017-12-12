@@ -297,6 +297,19 @@ let update (msg:Msg) (model:Model) =
 
 ---
 
+## VIEW
+
+```fsharp
+let view model dispatch =
+
+  R.div []
+      [ R.button [ OnClick (fun _ -> dispatch Decrement) ] [ R.str "-" ]
+        R.div [] [ R.str (sprintf "%A" model) ]
+        R.button [ OnClick (fun _ -> dispatch Increment) ] [ R.str "+" ] ]
+```
+
+---
+
 ## PROGRAM
 
 ```fsharp
